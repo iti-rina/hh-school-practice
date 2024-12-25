@@ -4,11 +4,11 @@ module.exports = {
   arrowParens: 'always',
   printWidth: 120,
   tabWidth: 4,
+  semi: true,
   overrides: [
       {
           files: ['*.json'],
           options: {
-              semi: true,
               tabWidth: 2,
           },
       },
