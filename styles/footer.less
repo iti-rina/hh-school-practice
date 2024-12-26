@@ -1,0 +1,135 @@
+.footer {
+  background-color: #212122;
+  width: 100%;
+  padding: 30px 0 22px;
+
+  @media @gt-tablet {
+    padding: 30px 0 29px;
+  }
+
+  @media @gt-tablet {
+    padding: 40px 0 35px;
+  }
+}
+
+.footer__container {
+  margin: 0 auto;
+  max-width: 290px;
+
+  @media @gt-mobile {
+    max-width: 698px;
+  }
+
+  @media @gt-tablet {
+    max-width: 930px;
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.social__item {
+  list-style: none;
+}
+
+@social: facebook, twitter, vk, instagram;
+
+each(@social, {
+  .social__link_@{value} {
+    background-image: url('/assets/@{value}.svg');
+    display: block;
+    width: 36px;
+    height: 36px;
+  }
+})
+
+@download: app-store, google-play;
+
+each(@download, {
+  .download__link_@{value} {
+    background-image: url('/assets/@{value}.svg');
+    display: block;
+    width: 140px;
+    height: 40px;
+  }
+})
+
+.download {
+  display: flex;
+  gap: 8px;
+}
+
+.footer__navigation {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 30px;
+
+  @media @gt-mobile {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  @media @gt-tablet {
+    padding-bottom: 39px;
+  }
+}
+
+.footer__navigation::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #666666;
+  position: absolute;
+  bottom: 0;
+}
+
+.copyright {
+  color: #999999;
+  line-height: 1.5;
+}
+
+.copyright__text {
+  margin: 0;
+  max-width: 250px;
+
+  @media @gt-mobile {
+    max-width: 580px;
+  }
+
+  @media @gt-tablet {
+    max-width: 100%;
+  }
+}
+
+.footer__hh-link {
+  display: none;
+}
+
+@media @gt-tablet {
+  .footer__hh-link {
+    background-image: url('/assets/hh-grey.svg');
+    background-size: 46px 46px;
+    display: block;
+    width: 46px;
+    height: 46px;
+  }
+}
+
