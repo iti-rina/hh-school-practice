@@ -25,16 +25,6 @@
   }
 }
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .social__list {
   margin: 0;
   padding: 0;
@@ -80,6 +70,7 @@ each(@download, {
   flex-direction: column;
   gap: 30px;
   padding-bottom: 30px;
+  border-bottom: 1px solid #666666;
 
   @media @gt-mobile {
     flex-direction: row;
@@ -90,15 +81,6 @@ each(@download, {
   @media @gt-tablet {
     padding-bottom: 39px;
   }
-}
-
-.footer__navigation::after {
-  content: '';
-  width: 100%;
-  height: 1px;
-  background-color: #666666;
-  position: absolute;
-  bottom: 0;
 }
 
 .copyright {
